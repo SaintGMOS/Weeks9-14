@@ -6,7 +6,7 @@ public class Mover : MonoBehaviour
 {
 
     public GameObject prefab;
-    public static float speed = 1;
+    public float speed = 0.1f;
 
     // Start is called before the first frame update
     void Start()
