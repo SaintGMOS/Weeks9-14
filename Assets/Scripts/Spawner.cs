@@ -23,8 +23,7 @@ public class Spawner : MonoBehaviour
 
     public Defective defectiveClass;
 
-
-
+ 
 
 
     void Start()
@@ -35,7 +34,7 @@ public class Spawner : MonoBehaviour
     private void green()
     {
         created.SetActive(true);
-        Debug.Log("G");
+        //Debug.Log("G");
     }
 
 
@@ -50,6 +49,7 @@ public class Spawner : MonoBehaviour
         {
 
             defectiveClass.SetDefective(defective);
+
 
         }
 

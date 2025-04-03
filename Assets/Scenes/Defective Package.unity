@@ -674,6 +674,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2784013859500147484, guid: 2a9cc7a92421b6548a6786eb64a80ea3, type: 3}
   m_PrefabInstance: {fileID: 4501209338516108220}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &948131447 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2788547017864234665, guid: 2a9cc7a92421b6548a6786eb64a80ea3, type: 3}
+  m_PrefabInstance: {fileID: 4501209338516108220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948131446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e06d5c214d049c4993090972aefa88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1318783412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,6 +1175,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 948131447}
+        m_TargetAssemblyTypeName: Mover, Assembly-CSharp
+        m_MethodName: StartMoving
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   defective: 0
   defectiveClass: {fileID: 1944550663}
 --- !u!1 &1627888394
@@ -1468,6 +1491,10 @@ PrefabInstance:
       propertyPath: speed
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 2788547017864234665, guid: 2a9cc7a92421b6548a6786eb64a80ea3, type: 3}
+      propertyPath: spawner
+      value: 
+      objectReference: {fileID: 1457719774}
     - target: {fileID: 6566501029384494254, guid: 2a9cc7a92421b6548a6786eb64a80ea3, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.6271875
@@ -1478,11 +1505,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6566501029384494254, guid: 2a9cc7a92421b6548a6786eb64a80ea3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.11
+      value: -10.99
       objectReference: {fileID: 0}
     - target: {fileID: 6566501029384494254, guid: 2a9cc7a92421b6548a6786eb64a80ea3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.75
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 6566501029384494254, guid: 2a9cc7a92421b6548a6786eb64a80ea3, type: 3}
       propertyPath: m_LocalPosition.z
