@@ -5,8 +5,11 @@ using UnityEngine;
 public class FlyAway : MonoBehaviour
 {
     public bool isFly;
-    public float flySpeed;
-        
+    public float hSpeed;
+    public float vSpeed;
+
+    public bool activateVert = false;
+
     public GameObject defectivePackage;
 
 
@@ -14,24 +17,40 @@ public class FlyAway : MonoBehaviour
     {
 
         isFly = fly;
+        Debug.Log("FLYDAMMIT!");
+        if (isFly)
+        {
+           
+            StartCoroutine(FlyMove());
+        }
 
     }
 
 
     IEnumerator FlyMove()
     {
-        if (isFly)
+        while(isFly)
         {
-            Vector3 loc = transform.position;
 
-            loc.x += flySpeed;
+            Vector3 loc = defectivePackage.transform.position;
+
+            loc.x += hSpeed;
+
+            Debug.Log("RIGHT");
+            defectivePackage.transform.position = loc;
+
+            if (activateVert)
+            {
+
+               loc.y += vSpeed;
+
+            }
 
             defectivePackage.transform.position = loc;
 
+            yield return null;
+
         }
-        yield return null;
-
-
     }
 
 
@@ -47,8 +66,14 @@ public class FlyAway : MonoBehaviour
         // Update is called once per frame
         void Update()
         {
-            StartCoroutine(FlyMove());
+        if (defectivePackage.transform.position.x > 3f)
+        {
+
+            Debug.Log("UP");
+            activateVert = true;
+            
         }
+    }
 
 
 

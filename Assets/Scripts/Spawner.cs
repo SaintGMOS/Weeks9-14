@@ -41,7 +41,7 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     { 
-        bool isDefective = Random.value < 0.4f;
+        bool isDefective = Random.value < 0.2f;
 
         defective = isDefective;
 

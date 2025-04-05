@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,11 +8,15 @@ public class Defective : MonoBehaviour
 {
     public bool isDefective;
 
+    public GameObject defectiveIndicator;
+
+    public GameObject created;
 
 
+    // Diff Classs
     public bool fly;
 
-    private FlyAway flyClass;
+    public FlyAway flyClass;
 
     public void SetDefective(bool defectiveValue)
     {
@@ -20,7 +25,8 @@ public class Defective : MonoBehaviour
 
         if (isDefective)
         {
-            Debug.Log("Defective!");
+            Debug.Log("DEFECTIVE!!!!!!!!");
+            defectiveIndicator.SetActive(true);
             flyClass.SetFly(fly);
          
         }
