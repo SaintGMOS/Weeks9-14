@@ -8,7 +8,7 @@ public class FlyAway : MonoBehaviour
     
     public bool isFly;  // Flag  whether the package should fly
 
-    // Horizontal and vertical speeds for movement
+    // Horizontal and vertical speeds for movement 
     public float hSpeed;
     public float vSpeed;
 
