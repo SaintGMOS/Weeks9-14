@@ -9,11 +9,8 @@ using UnityEngine.UIElements;
 public class Defective : MonoBehaviour
 {
     public bool isDefective;  // Flag to indicate if this package is defective
-
     public GameObject defectiveIndicator; // Ref to a visual that shows the package is defective
-
     public GameObject PushButton; // Ref to a push button GameObject
-
     public ParticleSystem explosion;  // Ref to the particle system used for the explosion effect
 
 
@@ -25,11 +22,17 @@ public class Defective : MonoBehaviour
     public UnityEvent Explosion; // UnityEvent to handle explosion events
 
     // Method to start the explosion effect
+
+
+
+
     public void startExplosion()
     {
+
         //Debug.Log("Explosion");
         // Activate the explosion particle system GameObject
         explosion.gameObject.SetActive(true);
+
     }
 
 
@@ -37,12 +40,14 @@ public class Defective : MonoBehaviour
     // Method to set if this package is defective or not
     public void SetDefective(bool defectiveValue)
     {
+
         // Update the defective flag
         isDefective = defectiveValue;
 
         // If the package is defective, execute the following 
         if (isDefective)
         {
+
             //Debug.Log("SECOND: " + isDefective);
             //Debug.Log("DEFECTIVE!!!!!!!!");
 
@@ -61,22 +66,14 @@ public class Defective : MonoBehaviour
             // Disable the push button
             PushButton.gameObject.SetActive(false);
 
-
         }
         else
         {
+
             //Debug.Log("Normal");
   
         }
 
-
     }
-
-   
-
-
-
-
-
 
     }

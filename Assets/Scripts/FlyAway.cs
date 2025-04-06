@@ -5,20 +5,24 @@ using UnityEngine;
 public class FlyAway : MonoBehaviour
 {
 
-    
-    public bool isFly;  // Flag  whether the package should fly
+    public bool isFly;  // Flag whether the package should fly
 
     // Horizontal and vertical speeds for movement 
     public float hSpeed;
     public float vSpeed;
 
-    // When set to true, vertical movementis activated
+    // When set to true, vertical movement is activated
     public bool activateVert = false;
 
     // Reference to the GameObject that should be moved 
     public GameObject defectivePackage;
 
     // Method to set whether the object should fly or not
+    
+    
+    
+    
+    
     public void SetFly(bool fly)
     {
 
@@ -37,7 +41,12 @@ public class FlyAway : MonoBehaviour
         }
 
     }
-    // Coroutine that updates the package's position each frame while isFly remains true
+  
+    
+    
+    
+    
+    // Coroutine that updates the packags position each frame while isFly remains true
     IEnumerator FlyMove()
     {
 
@@ -61,7 +70,7 @@ public class FlyAway : MonoBehaviour
 
             }
 
-            // Update the package's position with the new osition
+            // Update the package's position with the new position
             defectivePackage.transform.position = loc;
 
             //Debug.Log("New position: " + loc);
@@ -73,13 +82,13 @@ public class FlyAway : MonoBehaviour
 
 
 
+
         // Update is called once per frame
         void Update()
         {
 
-
-        // Check if the package's x position has passed (-8f)
-        // When it does, activate vertical movement by setting activateVert to true
+        // Check if the package's x position has passed (-8f)(The X where it passes)
+        // When it does, activate v-movement by setting activateVert to true
         if (defectivePackage.transform.position.x > -8f)
         {
 

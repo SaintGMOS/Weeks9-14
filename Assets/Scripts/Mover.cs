@@ -6,10 +6,10 @@ using UnityEngine.Events;
 public class Mover : MonoBehaviour
 {
 
-    // Reference to a prefab )
+    // Reference to a prefab 
     public GameObject prefab;
 
-    // Speed at which the object will move along the x-axis
+    // Speed at which the object will move along the x
     public float speed = 0.1f;
 
     // Flag to determine whether the object should start moving
@@ -19,6 +19,9 @@ public class Mover : MonoBehaviour
     public Spawner spawner;
 
    
+
+
+
     void Start()
     {
         // Check if the spawner reference is assigned
@@ -30,6 +33,9 @@ public class Mover : MonoBehaviour
 
         }
     }
+
+
+
 
     // Update is called once per frame
     void Update()
@@ -50,15 +56,16 @@ public class Mover : MonoBehaviour
 
     }
 
+
+
+
     // This method is called when the PackageSpawned event is invoked
     public void StartMoving()
     {
 
-        // Set startMove to true to begin moving the object in Update() 
+        // Set startMove to true to begin moving the object 
         startMove = true;
         
-
     }
-
 
 }

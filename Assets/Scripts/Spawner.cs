@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
     public GameObject spawnLocation; // Spawn Location of the Package
     private GameObject package; // Ref to the currently spawned Package
     public float destroyTime; // Time (in seconds) after which the spawned package will be destroyed
-
+    // public float chance; // Can be used if u wanted to change the % chance in the inspector
 
     // UI/Visual
     public GameObject created; // Reference to a "green block"
@@ -22,6 +22,8 @@ public class Spawner : MonoBehaviour
     // Defective Package Handling
     public bool defective;              // Flag indicating whether the current package is defective
     public Defective defectiveClass;    // Reference to a Defective script/component that handles defective packages
+
+
 
 
 
@@ -42,6 +44,9 @@ public class Spawner : MonoBehaviour
 
 
 
+
+
+
     public void Spawn()
     {
         // Determine if the spawned package is defective.
@@ -57,8 +62,6 @@ public class Spawner : MonoBehaviour
             //Debug.Log("FIRST: " + defective);
             // Will handle any logic for defective packages.
             defectiveClass.SetDefective(defective);
-
-
 
         }
 
@@ -92,12 +95,5 @@ public class Spawner : MonoBehaviour
         // Invoke the PackageSpawned event to notify any listeners.
         PackageSpawned.Invoke();
     }
-
-    
-   
-
-
-
-
 
 }
