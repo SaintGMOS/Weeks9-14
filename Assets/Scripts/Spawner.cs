@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
     private GameObject package; // Ref to the currently spawned Package
     public float destroyTime;
 
+
     // Green(Block for Created)
     public GameObject created;
     
@@ -20,10 +21,9 @@ public class Spawner : MonoBehaviour
 
     // Other Classes
     public bool defective;
-
     public Defective defectiveClass;
 
- 
+
 
 
     void Start()
@@ -41,15 +41,17 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     { 
-        bool isDefective = Random.value < 0.2f;
+        bool isDefective = Random.value < 0.1f;
 
         defective = isDefective;
+
 
         if (defectiveClass != null)
         {
 
-            Debug.Log("FIRST: " + defective);
+            //Debug.Log("FIRST: " + defective);
             defectiveClass.SetDefective(defective);
+
 
 
         }
@@ -63,6 +65,7 @@ public class Spawner : MonoBehaviour
             if (flyAway != null)
             {
                 flyAway.SetFly(true);
+
             }
             else
             {

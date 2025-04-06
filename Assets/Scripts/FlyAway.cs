@@ -17,11 +17,11 @@ public class FlyAway : MonoBehaviour
     {
 
         isFly = fly;
-        Debug.Log("FLYDAMMIT!");
-        Debug.Log("THIRD: " + isFly);
+        //Debug.Log("FLYDAMMIT!");
+       // Debug.Log("THIRD: " + isFly);
         if (isFly)
         {
-            Debug.Log("Starting Coroutine");
+            //Debug.Log("Starting Coroutine");
             StartCoroutine(FlyMove());
             
         }
@@ -38,18 +38,18 @@ public class FlyAway : MonoBehaviour
 
             loc.x += hSpeed * Time.deltaTime;
 
-            Debug.Log("RIGHT" + loc.x);
+            //Debug.Log("RIGHT" + loc.x);
             
             if (activateVert)
             {
                 
                 loc.y += vSpeed * Time.deltaTime;
-                Debug.Log("UP" + loc.y);
+               //Debug.Log("UP" + loc.y);
 
             }
 
             defectivePackage.transform.position = loc;
-            Debug.Log("New position: " + loc);
+            //Debug.Log("New position: " + loc);
 
             yield return null;
 

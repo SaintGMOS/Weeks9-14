@@ -11,6 +11,7 @@ public class Mover : MonoBehaviour
 
     private bool startMove = false;
 
+
     public Spawner spawner;
 
     // Start is called before the first frame update
@@ -18,7 +19,9 @@ public class Mover : MonoBehaviour
     {
         if (spawner != null)
         {
+            Debug.Log("StartMOVEMENTYUR");
             spawner.PackageSpawned.AddListener(StartMoving);
+
         }
     }
 
@@ -28,11 +31,22 @@ public class Mover : MonoBehaviour
         if (startMove)
         {
             Vector3 loc = transform.position;
-
             loc.x += speed;
-
             transform.position = loc;
         }
+
+
+    }
+
+
+    public void RemoveMovement(bool moveOff)
+    {
+        if (moveOff)
+        {
+            Debug.Log("StopMOVEMENT");
+        }
+
+
     }
 
 
@@ -40,7 +54,9 @@ public class Mover : MonoBehaviour
     public void StartMoving()
     {
 
-        startMove = true;
+       
+            startMove = true;
+        
 
     }
 
