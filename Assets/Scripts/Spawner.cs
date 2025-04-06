@@ -48,12 +48,28 @@ public class Spawner : MonoBehaviour
         if (defectiveClass != null)
         {
 
+            Debug.Log("FIRST: " + defective);
             defectiveClass.SetDefective(defective);
 
 
         }
 
         package = Instantiate(prefab, spawnLocation.transform.position, Quaternion.identity);
+
+
+        if (isDefective)
+        {
+            FlyAway flyAway = package.GetComponent<FlyAway>();
+            if (flyAway != null)
+            {
+                flyAway.SetFly(true);
+            }
+            else
+            {
+                Debug.LogWarning("FlyAway component AINT FREAKIN WORKIN.");
+            }
+        }
+
         Destroy(package,destroyTime);
 
         PackageSpawned.Invoke();

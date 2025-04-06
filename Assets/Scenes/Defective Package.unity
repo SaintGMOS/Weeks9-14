@@ -275,7 +275,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.23716533, g: 1, b: 0, a: 1}
+  m_Color: {r: 0.080678105, g: 1, b: 0, a: 0.33333334}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -498,7 +498,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 8
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.16948538, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.0141509175, a: 0.7882353}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -708,10 +708,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFly: 0
-  hSpeed: 0
-  vSpeed: 0
+  hSpeed: 5
+  vSpeed: 5
   activateVert: 0
-  defectivePackage: {fileID: 1457719772}
+  defectivePackage: {fileID: 948131446}
 --- !u!1 &1318783412
 GameObject:
   m_ObjectHideFlags: 0

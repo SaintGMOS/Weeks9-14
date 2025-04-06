@@ -25,6 +25,7 @@ public class Defective : MonoBehaviour
 
         if (isDefective)
         {
+            Debug.Log("SECOND: " + isDefective);
             Debug.Log("DEFECTIVE!!!!!!!!");
             defectiveIndicator.SetActive(true);
             flyClass.SetFly(fly);
